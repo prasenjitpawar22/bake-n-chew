@@ -1,0 +1,8 @@
+<div class="mt-5" style="padding-top: 40px;">
+  <partial name="_CardProduct" />
+</div>
+
+@if (TempData["message"] != null)
+{
+  <script>alert('@TempData["message"]');</script>
+}

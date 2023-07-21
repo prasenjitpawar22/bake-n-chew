@@ -1,0 +1,42 @@
+@model BakeNChew.ViewModels.ProductModelView;
+
+@* @{
+  var qtyOrder = ViewData;
+  } *@
+
+<div class="d-flex justify-content-center" style="gap: 24px; flex-wrap: wrap;">
+
+  @if (!Model.Products.Any())
+  {
+    <div class="d-flex align-items-center flex-column">
+      <h1 class="text-danger">Oops! product not found...</h1>
+      <img src="~/images/page-not-found.png" class="w-50" />
+    </div>
+  }
+  else
+  {
+    @foreach (var product in Model.Products)
+    {
+      <div class="card text-white bg-primary mb-3" style="width: 20rem; max-height: 20rem;">
+        @* <div class="card-header">Header</div> *@
+        <div class="card-body p-2 text-dark border" style="background-color: #ffff;">
+          <div id="a">
+            <img src="https://localhost:7293/images/@product.Image" class="card-img" style="" alt="..." />
+            <h4 class="card-title pt-4">@product.ProductName </h4>
+          </div>
+          <h5 class="card-price" id="card-price">₹@product.Price</h5>
+
+          <a asp-controller="Product" asp-action="GetProduct" asp-route-id="@product.ProductId"
+        class="btn btn-sm btn-primary">View
+            Details</a>
+          @if (!product.Availiblity)
+          {
+            <p>Out of stock</p>
+          }
+          <span class="card1-span shadow-sm" id="b">@product.Category</span>
+        </div>
+      </div>
+    }
+  }
+  @* -------------------------------------------------------- *@
+</div>

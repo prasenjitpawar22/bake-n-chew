@@ -1,0 +1,76 @@
+@model RegisterModel
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+@* <h1>@ViewData["Title"]</h1> *@
+<h1>Register</h1>
+
+<div class="container h-100 ">
+    <div class="container py-4 h-100 bg-dark">
+        <div class="d-flex justify-content-center">
+            <div class="col-md-8 col-lg-6 col-sm-12 shadow-lg py-4 px-5 bg-light text-center">
+                <form method="post">
+                    <h2>Sign up</h2>
+                    <hr />
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="form-floating py-2">
+                        <input asp-for="FirstName" class="form-control" autocomplete="username" aria-required="true" />
+                        <label asp-for="FirstName"></label>
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+
+                    </div>
+                    <div class="form-floating py-2">
+                        <input asp-for="LastName" class="form-control" autocomplete="username" aria-required="true" />
+                        <label asp-for="LastName"></label>
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+
+                    </div>
+                    <div class="form-floating py-2">
+                        <input asp-for="CustomerAddress" class="form-control" autocomplete="username"
+                            aria-required="true" />
+                        <label asp-for="CustomerAddress"></label>
+                        <span asp-validation-for="CustomerAddress" class="text-danger"></span>
+
+                    </div>
+
+                    <div class="form-floating py-2">
+                        <input asp-for="PhoneNumber" class="form-control" autocomplete="mobile" aria-required="true" />
+                        <label asp-for="PhoneNumber"></label>
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+
+
+                    <div class="form-floating py-2">
+                        <input asp-for="Email" class="form-control" autocomplete="username" aria-required="true" />
+                        <label asp-for="Email"></label>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-floating py-2">
+                        <input asp-for="Password" class="form-control" autocomplete="new-password"
+                            aria-required="true" />
+                        <label asp-for="Password"></label>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating py-2">
+                        <input asp-for="ConfirmPassword" class="form-control" autocomplete="new-password"
+                            aria-required="true" />
+                        <label asp-for="ConfirmPassword"></label>
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+
+                    <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+                    @* <span asp-validation-for="Email" class="text-danger"></span>
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                        <span asp-validation-for="Password" class="text-danger"></span> *@
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+<partial name="_ValidationScriptsPartial" />
+}

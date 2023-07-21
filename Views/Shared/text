@@ -1,0 +1,162 @@
+<div class="card text-white bg-primary mb-3" style="width: 20rem; max-height: 20rem;">
+    @* <div class="card-header">Header</div> *@
+    <div class="card-body p-2  text-dark border" style="background-color: #ffff;">
+        <div id="a">
+            <img src="https://localhost:7293/images/cupcake1.jpg" class="card-img" style="" alt="..." />
+            <h4 class="card-title pt-4">Cream Filled Cupcakes</h4>
+            @* <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                of
+                the
+                card's
+                content.</p> *@
+        </div>
+        <h5 class="card-price" id="card-price">₹490.00</h5>
+        <span class="card-add-to-cart" id="add-to-cart">Add to cart</span>
+        <span class="card1-span shadow-sm" id="b">Cupcake</span>
+    </div>
+</div>
+
+<!-- 2------------  -->
+<div class="card text-white bg-primary mb-3" style="width: 20rem; max-height: 20rem;">
+    @* <div class="card-header">Header</div> *@
+    <div class="card-body p-2  text-dark border" style="background-color: #ffff;">
+        <div id="a">
+            <img src="~/images/cupcake3.jpg" class="card-img" alt="..." />
+            <h4 class="card-title pt-4">Chocolate cupcake</h4>
+            @* <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                of
+                the
+                card's
+                content.</p> *@
+        </div>
+        <h5 class="card-price" id="card-price">₹490.00</h5>
+        <span class="card-add-to-cart" id="add-to-cart">Add to cart</span>
+        <span class="card1-span shadow-sm" id="b">Cupcake</span>
+    </div>
+</div>
+<div class="card text-white bg-primary mb-3" style="width: 20rem; max-height: 20rem;">
+    @* <div class="card-header">Header</div> *@
+    <div class="card-body p-2  text-dark border" style="background-color: #ffff;">
+        <div id="a">
+            <img src="~/images/chocake1.jpg" class="card-img" style="" alt="..." />
+            <h4 class="card-title pt-4">Chocolate cake</h4>
+            @* <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                of
+                the
+                card's
+                content.</p> *@
+        </div>
+        <h5 class="card-price" id="card-price">₹590.00</h5>
+        <span class="card-add-to-cart" id="add-to-cart">Add to cart</span>
+        <span class="card1-span shadow-sm" id="b">Cake</span>
+    </div>
+</div>
+@* ---------- *@
+<div class="card text-white bg-primary mb-3" style="width: 20rem; max-height: 20rem;">
+    @* <div class="card-header">Header</div> *@
+    <div class="card-body p-2  text-dark border" style="background-color: #ffff;">
+        <div id="a">
+            <img src="~/images/cupcake4.jpg" class="card-img" style="" alt="..." />
+            <h4 class="card-title pt-4"></h4>
+            @* <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                of
+                the
+                card's
+                content.</p> *@
+        </div>
+        <h5 class="card-price" id="card-price">₹790.00</h5>
+        <span class="card-add-to-cart" id="add-to-cart">Add to cart</span>
+        <span class="card1-span shadow-sm" id="b">Cupcake</span>
+    </div>
+</div>
+
+<div class="card text-white bg-primary mb-3" style="width: 20rem; max-height: 20rem;">
+    @* <div class="card-header">Header</div> *@
+    <div class="card-body p-2  text-dark border" style="background-color: #ffff;">
+        <div id="a">
+            <img src="~/images/icecake1.png" class="card-img" style="" alt="..." />
+            <h4 class="card-title pt-4">Cream Ice Cake</h4>
+            @* <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                of
+                the
+                card's
+                content.</p> *@
+        </div>
+        <h5 class="card-price" id="card-price">₹390.00</h5>
+        <span class="card-add-to-cart" id="add-to-cart">Add to cart</span>
+        <span class="card1-span shadow-sm" id="b">Cake</span>
+    </div>
+</div>
+
+
+<div class="card text-white bg-primary mb-3" style="width: 20rem; max-height: 20rem;">
+    @* <div class="card-header">Header</div> *@
+    <div class="card-body p-2  text-dark border" style="background-color: #ffff;">
+        <div id="a">
+            <img src="~/images/icecreamcake1.jpg" class="card-img" style="" alt="..." />
+            <h4 class="card-title pt-4">Ice-Cream cake</h4>
+            @* <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                of
+                the
+                card's
+                content.</p> *@
+        </div>
+        <h5 class="card-price" id="card-price">₹590.00</h5>
+        <span class="card-add-to-cart" id="add-to-cart">Add to cart</span>
+        <span class="card1-span shadow-sm" id="b">Cake</span>
+    </div>
+</div>
+
+<div class="card text-white bg-primary mb-3" style="width: 20rem; max-height: 20rem;">
+    @* <div class="card-header">Header</div> *@
+    <div class="card-body p-2  text-dark border" style="background-color: #ffff;">
+        <div id="a">
+            <img src="~/images/buttercake1.jpg" class="card-img" style="" alt="..." />
+            <h4 class="card-title pt-4">Butter Cake</h4>
+            @* <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                of
+                the
+                card's
+                content.</p> *@
+        </div>
+        <h5 class="card-price" id="card-price">₹290.00</h5>
+        <span class="card-add-to-cart" id="add-to-cart">Add to cart</span>
+        <span class="card1-span shadow-sm" id="b">Cake</span>
+    </div>
+</div>
+
+<div class="card text-white bg-primary mb-3" style="width: 20rem; max-height: 20rem;">
+    @* <div class="card-header">Header</div> *@
+    <div class="card-body p-2  text-dark border" style="background-color: #ffff;">
+        <div id="a">
+            <img src="~/images/cupcake5.jpg" class="card-img" style="" alt="..." />
+            <h4 class="card-title pt-4">Cupcake</h4>
+            @* <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                of
+                the
+                card's
+                content.</p> *@
+        </div>
+        <h5 class="card-price" id="card-price">₹590.00</h5>
+        <span class="card-add-to-cart" id="add-to-cart">Add to cart</span>
+        <span class="card1-span shadow-sm" id="b">Cake</span>
+    </div>
+</div>
+
+<div class="card text-white bg-primary mb-3" style="width: 20rem; max-height: 20rem;">
+    @* <div class="card-header">Header</div> *@
+    <div class="card-body p-2  text-dark border" style="background-color: #ffff;">
+        <div id="a">
+            <img src="~/images/cake3.jpg" class="card-img" style="" alt="..." />
+            <h4 class="card-title pt-4">Berry Cake</h4>
+            @* <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                of
+                the
+                card's
+                content.</p> *@
+        </div>
+        <h5 class="card-price" id="card-price">₹490.00</h5>
+        <span class="card-add-to-cart" id="add-to-cart">Add to cart</span>
+        <span class="card1-span shadow-sm" id="b">Cake</span>
+    </div>
+</div>

@@ -1,0 +1,145 @@
+@model BakeNChew.ViewModels.ProductModelView
+
+@if (TempData["message"] != null)
+{
+  <div class="modal fade" id="exampleModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <span>×</span>
+        </div>
+        <div class="modal-body">
+          @ViewBag.Saved
+        </div>
+        <div class="modal-footer">
+          Close
+          Save changes
+        </div>
+      </div>
+    </div>
+  </div>
+}
+
+
+<div class="container  ">
+  <div class="py-2 shadow-lg bg-light">
+    <form method="post">
+      <div class="container d-flex">
+        <div class="cart_section">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10 offset-lg-1">
+                <div class="cart_container">
+                  <input type="hidden" asp-for="@Model.CartId" value="@Model.CartId" />
+                  <input type="hidden" asp-for="@Model.TotalQty" value="@Model.TotalQty" />
+                  <div class="cart_title">Shopping Cart<small> (@Model?.TotalQty item in your cart) </small>
+                  </div>
+                  @* <input type="hidden" asp-for="@Model.Cartitems" value="@Model.Cartitems" /> *@
+                  @foreach (var item in Model.Cartitems)
+                  {
+                    <div class="cart_items">
+                      <ul class="cart_list list-group">
+                        <li class="cart_item clearfix list-group-item">
+                          <div class="cart_item_image"><img src="https://localhost:7293/images/@item.ProductImage" alt="">
+                          </div>
+
+                          <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
+                            <div class="cart_item_name cart_info_col">
+                              <div class="cart_item_title">Name</div>
+                              <div class="cart_item_text">@item.ProductName </div>
+                            </div>
+                            @* <div class="cart_item_color cart_info_col">
+                              <div class="cart_item_title">Shape</div>
+                              <div class="cart_item_text"><span
+                              style="background-color:#999999;"></span>Silver</div>
+                              </div> *@
+                            <div class="cart_item_quantity cart_info_col">
+                              <div class="cart_item_title">Quantity</div>
+                              <div class="cart_item_text">@item.Quantity</div>
+                            </div>
+                            <div class="cart_item_price cart_info_col">
+                              <div class="cart_item_title">Price</div>
+                              <div class="cart_item_text">@item.ProductPrice</div>
+                            </div>
+                            <div class="cart_item_total cart_info_col">
+                              <div class="cart_item_title">Total</div>
+                              <div class="cart_item_text">@item.TotalPrice</div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  }
+
+                  @if (!Model.Cartitems.Any())
+                  {
+                    <div class="text-center mt-5 ">
+
+                      <i class="fa-solid fa-cart-shopping fa-5x "></i>
+                      <h3>Your shopping cart is empty!</h3>
+                      <p></p>
+                    </div>
+                  }
+                  <div class="order_total align-items-right">
+                    <div class="order_total_content text-md-right">
+                      <div class="order_total_title">Order Total:</div>
+                      <div class="order_total_amount">₹@Model.TotalPrice</div>
+                      <input asp-for="@Model.TotalPrice" type="hidden" value=@Model.TotalPrice />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        @* // address *@
+
+        <div class="cart_section cart_section_user_info">
+          <h2>Shipping Address</h2>
+
+          <div>
+            <p> @Model.UserAddress </p>
+            <input asp-for="@Model.UserAddress" type="hidden" value=@Model.UserAddress>
+            <p> @Model.UserPhone </p>
+            <input asp-for="@Model.UserPhone" type="hidden" value=@Model.UserPhone>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart_buttons">
+        @if (Model.Cartitems.Any())
+        {
+          <input type="submit" value="Place order" class="button text-decoration-none cart_button_clear" />
+        }
+        else
+        {
+
+          <button disabled class="button text-dark text-decoration-none  cart_button_checkout">
+            Place order</button>
+        }
+    </form>
+    <a asp-controller="Product" asp-action="Index" type="button"
+      class="button cart_button_clear text-decoration-none">Add
+      to
+      Cart</a>
+
+  </div>
+</div>
+
+
+@if (TempData["message"] != null)
+{
+  <script>alert('@TempData["message"]');</script>
+}
+
+
+@if (TempData["message"] != null)
+{
+  <script>
+    $(function () {
+      $("#exampleModal").modal("show");
+    });
+  </script>
+}

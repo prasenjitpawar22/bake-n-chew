@@ -1,0 +1,69 @@
+@model BakeNChew.ViewModels.ProductModelView;
+
+@foreach (var product in Model.Products)
+{
+  <div class="container mt-5">
+    <div class="card p-5">
+      <div class="container-fliud">
+        <div class="wrapper row">
+          <div class="preview col-md-6">
+
+            <div class="preview-pic tab-content">
+              <div class="tab-pane active" id="pic-1"><img class="w-50"
+                src="https://localhost:7293/images/@product.Image" /></div>
+            </div>
+          </div>
+          <div class="details col-md-6">
+            <h3 class="product-title text-capitalize">@product.ProductName</h3>
+            @* <div class="rating">
+              <div class="stars">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              </div>
+              <span class="review-no">41 reviews</span>
+              </div> *@
+            @* ------------------------------ *@
+            <p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem!
+              Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.</p>
+            @* -------------------------------------- *@
+
+            <h4 class="price">current price: <span>₹@product.Price</span></h4>
+
+            <h5 class="sizes">Shape:
+              <span class="size" data-toggle="tooltip" title="small">@product.Shape</span>
+            </h5>
+
+            @if (product.Availiblity)
+            {
+              <h5 class="sizes">Qty Available:
+                <span class="size" data-toggle="tooltip" title="small">@product.Qty</span>
+                <form asp-controller="Cart" asp-action="AddToCart">
+
+                  @* <input type="number" name="qtyOrder" />
+                    <input type="hidden" name="Id" value=@product.ProductId /> *@
+                  <input type="hidden" asp-for="ProductId" value=@product.ProductId />
+                  <input type="number" asp-for="orderQty" min="1" />
+
+                  @* <input type="submit" name="Add to cart" /> *@
+                  <input type="submit" class="add-to-cart btn-sm  btn-default btn btn-primary" value="Add to cart"
+                type="button" />
+                </form>
+              </h5>
+              <div class="action">
+                @* <button class="add-to-cart btn btn-default btn btn-primary" type="button">add to cart</button> *@
+                @* <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button> *@
+              </div>
+            }
+            else
+            {
+              <p class="text-danger">Out of stock</p>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+}

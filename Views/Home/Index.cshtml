@@ -1,0 +1,114 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+    @* ViewData["TotalItemsInCart"] = ViewBag.TotalItemsInCart; *@
+}
+
+@* <div class="container-fluid"> *@
+
+@* -----------------main-body-carosule-------------------------- *@
+<div id="carouselExampleControls" class="carousel slide mb-5 carosule-parent" data-bs-ride="carousel">
+    <div class="order-now-btn shadow-lg rounded-3">
+        <h2 class="">Let us bake sweet memory for you</h2>
+        <a asp-controller="Product" asp-action="Index" type="button" class="btn btn-primary px-2 "
+            style="z-index: 1;">Order
+
+            @* @if (ViewBag.showmodel)
+                {
+
+                } *@
+            @* @ViewBag.showmodel *@
+            Now</a>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="~/images/cake2.jpg" class="d-block w-100 carousel-img" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/pexels-photo-806363.jpeg" class="d-block w-100 carousel-img" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/cake1.jpg" class="d-block w-100 carousel-img" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+<div class="container pt-3" style="padding: 40px;">
+    <div class="row mb-5 mt-5">
+        <div class="col-lg-6 p-2">
+            <h1 style="">ABOUT CAKE SHOP</h1>
+            @* <h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum nemo mollitia dolor odio distinctio
+                </h3> *@
+            <p>
+                Since 2016 we have strived to provide fresh and high quality ,home made baked goods
+                for the Pune area. So please enjoy – this is our heritage.
+            </p>
+        </div>
+        <div class="col-lg-6 px-lg-5">
+            <h1 class="pb-2 text-primary">RATING</h1>
+            <div class="">
+                <div class="d-flex align-items-center pb-4">
+                    <div class="d-flex flex-column" style="gap: 12px;">
+                        <h3 style="margin-bottom: 0;">Cupcake</h3>
+                        <h3 style="margin-bottom: 0;">IceCake</h3>
+                        <h3 style="margin-bottom: 0;">Ice-Cream Cakes</h3>
+                        <h3 style="margin-bottom: 0;">Photo Cake</h3>
+                    </div>
+                    <div class="d-flex flex-column" style="gap: 12px;">
+                        <div style="padding-left: 40px;">
+                            <i class="fa-solid fa-star fa-2x " style="color: orange"></i>
+                            <i class="fa-solid fa-star fa-2x " style="color: orange"></i>
+                            <i class="fa-solid fa-star fa-2x " style="color: orange"></i>
+                            <i class="fa-solid fa-star fa-2x " style="color: orange"></i>
+                            <i class="fa-solid fa-star fa-2x " style="color: orange"></i>
+                        </div>
+                        <div style="padding-left: 40px;">
+                            <i class="fa-solid fa-star fa-2x " style="color: orange"></i>
+                            <i class="fa-solid fa-star fa-2x " style="color: orange"></i>
+                            <i class="fa-solid fa-star fa-2x " style="color: orange"></i>
+                            @* <i class="fa-solid fa-star fa-2x " style="color: orange"></i>
+                                <i class="fa-solid fa-star fa-2x " style="color: orange"></i> *@
+                        </div>
+                        <div style="padding-left: 40px;">
+
+                            <i class="fa-solid fa-star fa-2x " style="color: orange"></i>
+                            <i class="fa-solid fa-star fa-2x " style="color: orange"></i>
+                            <i class="fa-solid fa-star fa-2x " style="color: orange"></i>
+                            <i class="fa-solid fa-star fa-2x " style="color: orange"></i>
+                            @* <i class="fa-solid fa-star fa-2x " style="color: orange"></i> *@
+                        </div>
+                        <div style="padding-left: 40px;">
+                            <i class="fa-solid fa-star fa-2x " style="color: orange"></i>
+                            <i class="fa-solid fa-star fa-2x " style="color: orange"></i>
+                            <i class="fa-solid fa-star fa-2x " style="color: orange"></i>
+                            <i class="fa-solid fa-star fa-2x " style="color: orange"></i>
+                            <i class="fa-solid fa-star-half fa-2x " style="color: orange"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="bg-primary mb-5">
+    @* -------------------card------------ *@
+
+    <partial name="_CardProduct" />
+
+    @*-------------------- review ---------------- *@
+</div>
+
+@* @if (TempData["message"] != null)
+    {
+    <script>alert('@TempData["message"]');</script>
+    } *@

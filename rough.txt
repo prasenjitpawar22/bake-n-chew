@@ -1,0 +1,10 @@
+INSERT INTO public."Products"("ProductId", "ProductName", "Shape", "Flavour", "Price", "Availiblity", "Image", "Category", "Qty") 
+	VALUES (1,'cream Filled Cupcakes','Round','Sweet', 490,True,'cupcake1.jpg','cupcake', 23), 
+           (2,'chocolate Cupcake','Round','Chocolate',490,True,'cupcake3.jpg','cupcake', 12), 
+           (3,'chocolate cake','Round','Chocolate',590,True,'Chocake1.jpg','cake', 12), 
+           (4,'cream Filled Cupcakes','Round','Sweet',790,True,'Cupcake4.jpg','cupcake', 12), 
+            (5,'cream Ice Cake','Round','Chocolate',390,True,'icecake1.png','cake', 12), 
+            (6,'ice Cream Cake','Round','Sweet','590',True,'icecreamcake1.jpg','cake', 12), 
+            (7,'butter Cake','Round','Butter',290,False,'buttercake1.jpg','cake', 0), 
+            (8,'cupcake','Round','Sweet',590,False,'cupcake5.jpg','cake', 0), 
+            (9,'berry Cake','Round','Berry',490,True,'Cake3.jpg','cake', 12); 
